@@ -1,0 +1,26 @@
+#file: noinspection SpellCheckingInspection
+main:
+  token:
+  ownerID:
+  botName: "Personal Bot"
+
+logging:
+  commands:
+    console: yes
+    system: no
+  buttons:
+    console: yes
+    system: no
+  modal:
+    console: yes
+    system: no
+  connection:
+    console: yes
+    system: no
+  selectMenus:
+    console: yes
+    system: no
+
+api:
+
+other:
