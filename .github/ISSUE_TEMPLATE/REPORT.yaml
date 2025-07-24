@@ -1,5 +1,7 @@
 name: "Report"
 description: Report any and all errors.
+assignees:
+  - dumbdemon
 body:
   - type: checkboxes
     attributes:
