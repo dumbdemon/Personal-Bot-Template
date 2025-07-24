@@ -1,11 +1,13 @@
 name: Feature Request
-description: |
-  Request a feature to be be added.
-  Please not that certain features will not be added if it exceeds a certain amount of complexity. Not because of my ability to create the feature, but because I want to keep this as simple as possible as to not overwhelm novice coders.
+description: Request a feature to be be added.
 title: "[REQUEST]: "
 assignees:
   - dumbdemon
 body:
+  - type: markdown
+    attributes:
+      value: |
+        Please not that certain features will not be added if it exceeds a certain amount of complexity. Not because of my ability to create the feature, but because I want to keep this as simple as possible as to not overwhelm novice coders.
   - type: checkboxes
     attributes:
       label: Are you sure that this is a feature that has not been requested before?
