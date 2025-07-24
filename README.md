@@ -33,18 +33,19 @@ You may skip to step 18, if you already have it open in an IDE.
 13. Download and install [Java for Desktops](https://www.java.com/en/), if you haven't already.
 14. Create a repo of this by clicking the `Use this template` button at the top.
 15. Click `<> Code` and copy the link under the `HTTPS` tab.
-16. In a folder of your choice (do not use a cloud folder as it is not necessary), right-click an empty area and click `Open Git BAsh here`.
+16. In a folder of your choice (do not use a cloud folder as it is not necessary), right-click an empty area and click `Open Git Bash here`.
 17. Type `git clone` then paste by hitting `SHIFT` + `INS` then press `ENTER`. Wait till it's done processing.
 18. Open the folder in your IDE.
 19. Create a copy of `config.yaml.example` and rename it to `config.yaml`.
 20. Open amd populate the `main` block and choose your logging options.
-21. Head to `src/main/java/com/terransky/personalBot/interactions` in the file viewer and expand all subfolders there.
+21. Head to `src/main/java/com/terransky/psersonalBot/interactions` in the file viewer and expand all subfolders there.
 22. Create a new java file in any folder extending to the appropriate type. `ButtonComponent` for Buttons, `ModalComponent` for Modals, `SelectMenuString` for String dropdown, `SelectMenuEntity` for Role/User dropdown, or `SlashCommand` for Slash Commands. Make sure the constructor is public and requires no arguments. See `Ping.java` or `InvalidButton.java` for an example.
 23. Override the [SlashCommand.execute()](https://github.com/dumbdemon/Personal-Bot-Template/blob/5846662e39919fca048db42c82ba661b856c252b/src/main/java/com/terransky/psersonalBot/core/interactions/SlashCommand.java#L96) function and populate the body.
 24. Open the `InteractionsHandler.java` file and in the constructor of the type you have made type `addInteraction();` and call the constructor of the object you have made.
 25. Test by running the bot. **NOTE: Commands may not populate immediately**. You may have to wait up to an hour. You can try refreshing Discord by hitting `CTRL` + `R` on the desktop app, or `F5` on the web app.
 26. Repeat steps 21 - 24 as needed.
-27. Head to your Gradle tasks and run the `shadowjar` task. This will create a `jar` file in `build/libs`.
+27. Add a PNG image to `src/main/resources` named `icon.png`. This will be the icon that will be displayed in the system tray. Image must be 16 x 16 pixels. You may add a larger image and it will be automatically resized; however, there will be loss of detail.
+28. Head to your Gradle tasks and run the `shadowjar` task. This will create a `jar` file in `build/libs`.
 
 After this you now have a jar file you can use to start the bot.
 
