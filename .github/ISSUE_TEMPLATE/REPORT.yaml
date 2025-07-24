@@ -1,0 +1,23 @@
+name: "Report"
+description: Report any and all errors.
+body:
+  - type: checkboxes
+    attributes:
+      label: Are you sure that this is not a duplicate report?
+      options:
+        - label: I have checked that there is no duplicate report and I understand that this report will be closed if otherwise.
+          required: true
+  - type: dropdown
+    attributes:
+      label: System running bot.
+      options:
+        - Windows
+        - Linux
+        - macOS
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Report Details
+    validations:
+      required: true

@@ -1,0 +1,32 @@
+name: Feature Request
+description: |
+  Request a feature to be be added.
+  Please not that certain features will not be added if it exceeds a certain amount of complexity. Not because of my ability to create the feature, but because I want to keep this as simple as possible as to not overwhelm novice coders.
+title: "[REQUEST]: "
+assignees:
+  - dumbdemon
+body:
+  - type: checkboxes
+    attributes:
+      label: Are you sure that this is a feature that has not been requested before?
+      options:
+        - label: I have checked that there is no duplicate feature and I understand that this request will be closed if otherwise.
+          required: true
+  - type: dropdown
+    attributes:
+      label: Type
+      description: Choose what type of feature. If other, please explain in details.
+      multiple: false
+      options:
+        - Automation
+        - Logging
+        - System Tray
+        - Notifications
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Feature Details
+    validations:
+      required: true
