@@ -18,7 +18,7 @@ Make a personal user bot without any of the hard work.</br></br>
 
 You may skip to step 18, if you already have it open in an IDE.
 
-1. Head to [Discord developor portal](https://discord.com/developers/applications).
+1. Head to [Discord developer portal](https://discord.com/developers/applications).
 2. Click `New Application` button and follow on-screen instructions.
 3. Fill out any details in the `General Information` tab, if desired.
 4. On the left, head to `Installation` tab.
@@ -37,10 +37,10 @@ You may skip to step 18, if you already have it open in an IDE.
 17. Type `git clone` then paste by hitting `SHIFT` + `INS` then press `ENTER`. Wait till it's done processing.
 18. Open the folder in your IDE.
 19. Create a copy of `config.yaml.example` and rename it to `config.yaml`.
-20. Populate the `main` block and choose your logging options.
-21. Head to `src/main/java/com/terransky/personalBot/interactions` in the filer viewer and expand all subfolders there.
+20. Open amd populate the `main` block and choose your logging options.
+21. Head to `src/main/java/com/terransky/personalBot/interactions` in the file viewer and expand all subfolders there.
 22. Create a new java file in any folder extending to the appropriate type. `ButtonComponent` for Buttons, `ModalComponent` for Modals, `SelectMenuString` for String dropdown, `SelectMenuEntity` for Role/User dropdown, or `SlashCommand` for Slash Commands. Make sure the constructor is public and requires no arguments. See `Ping.java` or `InvalidButton.java` for an example.
-23. Override the [SlashCommand.execute()](https://github.com/dumbdemon/Personal-Bot-Template/blob/5846662e39919fca048db42c82ba661b856c252b/src/main/java/com/terransky/psersonalBot/core/interactions/SlashCommand.java#L96) function and populate with the body.
+23. Override the [SlashCommand.execute()](https://github.com/dumbdemon/Personal-Bot-Template/blob/5846662e39919fca048db42c82ba661b856c252b/src/main/java/com/terransky/psersonalBot/core/interactions/SlashCommand.java#L96) function and populate the body.
 24. Open the `InteractionsHandler.java` file and in the constructor of the type you have made type `addInteraction();` and call the constructor of the object you have made.
 25. Test by running the bot. **NOTE: Commands may not populate immediately**. You may have to wait up to an hour. You can try refreshing Discord by hitting `CTRL` + `R` on the desktop app, or `F5` on the web app.
 26. Repeat steps 21 - 24 as needed.
@@ -51,7 +51,7 @@ After this you now have a jar file you can use to start the bot.
 ## Start bot on Startup
 
 If you plan on using the bot consistently, it is recommended to have the bot start on startup. These instructions are for Windows machines.
-1. Open the `autostart.bat` in Notepad by right-clicking and select `Edit`. Or if you have your IDE open, you edit it there.
+1. Open the `autostart.bat` in Notepad by right-clicking and select `Edit`. Or if you have your IDE open, you can edit it there.
 2. Replace the `C:\Path\to\jarfile\TheJar.jar` with the path to the jar from earlier.
 3. Right-click the Windows button, and open command prompt as admin.
 4. Copy the file path of `autostart.bat`.
