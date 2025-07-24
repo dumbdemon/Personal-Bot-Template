@@ -12,10 +12,21 @@ public class InteractionHandler<T extends IInteraction<?>> {
     protected InteractionHandler() {
     }
 
+    /**
+     * Add an {@link IInteraction} of type {@link T} to the handler.
+     *
+     * @param interaction An interaction of type {@link T}.
+     */
     protected final void addInteraction(T interaction) {
         interactionsHashSet.add(interaction);
     }
 
+    /**
+     * Search the handler for an interaction.
+     *
+     * @param search The name/id/label of the interaction.
+     * @return Optional containing an object of type {@link T} or null.
+     */
     @NotNull
     public Optional<T> getInteraction(String search) {
         return interactionsHashSet.stream()

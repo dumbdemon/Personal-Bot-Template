@@ -15,7 +15,6 @@ import java.io.FileNotFoundException;
 public class PersonalBot {
 
     private static final String TOKEN;
-    private static final SystemTray tray;
     private static final TrayIcon trayIcon;
     private static final Logger log = LoggerFactory.getLogger(PersonalBot.class);
 
@@ -23,7 +22,7 @@ public class PersonalBot {
         TOKEN = getConfig().getMain().getToken();
         if (SystemTray.isSupported()) {
             String botName = PersonalBot.getConfig().getMain().getBotName();
-            tray = SystemTray.getSystemTray();
+            final SystemTray tray = SystemTray.getSystemTray();
             final PopupMenu popup = new PopupMenu();
 
             ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -48,7 +47,6 @@ public class PersonalBot {
                 throw new RuntimeException(e);
             }
         } else {
-            tray = null;
             trayIcon = null;
         }
     }
