@@ -1,3 +1,4 @@
 @echo off
-
-start javaw -Xmx200m -jar C:\Path\to\jarfile\TheJar.jar
+cd C:\Path\to\jar\folder
+set path=C:\Program Files\Eclipse Adoptium\jdk-19.0.2.7-hotspot\bin;%path%
+javaw -jar .\PersonalBot.jar

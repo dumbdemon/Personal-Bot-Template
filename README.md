@@ -31,7 +31,7 @@ You may skip to step 18, if you already have it open in an IDE.
 11. Click `Copy`. Save this token. ***DO NOT SHARE THIS TOKEN WITH ANYONE! NEITHER I NOR A DISCORD REP WILL ASK IT OF YOU!***
 12. Download and install an IDE, if you haven't already. EX. [IntelliJ Community Edition](https://www.jetbrains.com/idea/download/), [Eclipse](https://eclipseide.org/), or [VS Code](https://code.visualstudio.com/).
 13. Download and install [Git Bash](https://git-scm.com/downloads), if you haven't already.
-14. Download and install [Java for Desktops](https://www.java.com/en/), if you haven't already.
+14. Download and install [Eclipse Adoptium Java 19](https://adoptium.net/installation/windows), if you haven't already.
 15. Create a repo of this by clicking the `Use this template` button at the top.
 16. Click `<> Code` and copy the link under the `HTTPS` tab.
 17. In a folder of your choice (do not use a cloud folder as it is not necessary), right-click an empty area and click `Open Git Bash here`.
@@ -54,10 +54,11 @@ After this you now have a jar file you can use to start the bot.
 
 If you plan on using the bot consistently, it is recommended to have the bot start on startup. These instructions are for Windows machines.
 1. Open the `autostart.bat` in Notepad by right-clicking and select `Edit`. Or if you have your IDE open, you can edit it there.
-2. Replace the `C:\Path\to\jarfile\TheJar.jar` with the path to the jar from earlier.
+2. Replace the `C:\Path\to\jar\folder` with the path to the jar from earlier. If you changed the installation folder of `Eclipse Adoptium Java 19`, change the path declaration.
 3. Right-click the Windows button, and open command prompt as admin.
-4. Copy the file path of `autostart.bat`.
-5. Type `mklink "C:\Path\to\autorun.bat" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\autorun.bat"`
+4. Copy the file path of `config.yaml`.
+5. Type `mklink "C:\Path\to\config.yaml" "C:\Path\to\jar\folder\config.yaml"` changing the command as appropriate.
 6. Close command prompt
-
-This will create a symbolic link to the autorun file. Think of it as a "super" shortcut. This will allow you to edit the file without having to move the file every time. If you don't want it to autostart anymore, simply head to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` and delete the `autorun.bat` file.
+7. Right-click `autostart.bat` and select `Create shortcut`.
+8. In a separate window, head to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp`
+9. Drag and drop the shortcut into the folder. You may get a UAC prompt.
