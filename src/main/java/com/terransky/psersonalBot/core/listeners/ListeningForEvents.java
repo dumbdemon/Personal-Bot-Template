@@ -73,7 +73,7 @@ public class ListeningForEvents extends ListenerAdapter {
 
     private void createInviteLinkFile(@NotNull String inviteUrl) {
         File inviteLink = new File("inviteLink.txt");
-        String inviteLinkText = inviteUrl.replace("&scope=bot", "");
+        String inviteLinkText = inviteUrl.replace("&scope=bot", "&integration_type=1&scope=applications.commands");
 
         if (!inviteLink.exists()) {
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(inviteLink))) {
