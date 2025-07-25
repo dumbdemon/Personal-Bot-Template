@@ -57,7 +57,7 @@ If you plan on using the bot consistently, it is recommended to have the bot sta
 2. Replace the `C:\Path\to\jarfile\TheJar.jar` with the path to the jar from earlier.
 3. Right-click the Windows button, and open command prompt as admin.
 4. Copy the file path of `autostart.bat`.
-5. Type `mklink "C:\Path\to\autorun.bat" "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\autorun.bat"`
+5. Type `mklink "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\autorun.bat" "C:\Path\to\autorun.bat"`
 6. Close command prompt
 
 This will create a symbolic link to the autorun file. Think of it as a "super" shortcut. This will allow you to edit the file without having to move the file every time. If you don't want it to autostart anymore, simply head to `C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp` and delete the `autorun.bat` file.
